@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expenses - ScrapPro</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="expenses.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <h2>♻️ ScrapPro</h2>
+
+    <nav>
+      <a href="index.html">📊 Dashboard</a>
+      <a href="purchase.html">📦 Purchases</a>
+      <a href="sales.html">🚚 Sales</a>
+      <a href="stock.html">🏭 Stock</a>
+      <a href="#">👥 Suppliers</a>
+      <a href="#">🧑‍💼 Customers</a>
+      <a href="#">💰 Payments</a>
+      <a class="active" href="expenses.html">💸 Expenses</a>
+      <a href="#">📈 Profit & Loss</a>
+      <a href="#">📄 Invoices</a>
+      <a href="#">📊 Reports</a>
+    </nav>
+  </aside>
+
+
+  <main class="main">
+
+    <header>
+      <div>
+        <h1>Expense Management</h1>
+        <p>Track all business expenses</p>
+      </div>
+    </header>
+
+
+    <!-- EXPENSE SUMMARY -->
+
+    <section class="expense-cards">
+
+      <div class="expense-card">
+        <span>💸</span>
+        <div>
+          <p>Total Expenses</p>
+          <h2 id="totalExpenses">₹0</h2>
+        </div>
+      </div>
+
+      <div class="expense-card">
+        <span>🚛</span>
+        <div>
+          <p>Transport</p>
+          <h2 id="transportTotal">₹0</h2>
+        </div>
+      </div>
+
+      <div class="expense-card">
+        <span>👷</span>
+        <div>
+          <p>Labour</p>
+          <h2 id="labourTotal">₹0</h2>
+        </div>
+      </div>
+
+      <div class="expense-card">
+        <span>📦</span>
+        <div>
+          <p>Other</p>
+          <h2 id="otherTotal">₹0</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ADD EXPENSE -->
+
+    <section class="panel">
+
+      <h2>💸 Add New Expense</h2>
+
+      <form id="expenseForm">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Expense Category</label>
+
+            <select id="category" required>
+              <option value="">Select Category</option>
+              <option value="Transport">Transport</option>
+              <option value="Labour">Labour</option>
+              <option value="Loading">Loading / Unloading</option>
+              <option value="Godown">Godown</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label>Amount (₹)</label>
+
+            <input
+              type="number"
+              id="amount"
+              placeholder="Enter expense amount"
+              min="0"
+              step="0.01"
+              required
+            >
+          </div>
+
+
+          <div class="form-group">
+            <label>Paid To</label>
+
+            <input
+              type="text"
+              id="paidTo"
+              placeholder="Person / Company name"
+            >
+          </div>
+
+
+          <div class="form-group">
+            <label>Payment Method</label>
+
+            <select id="paymentMethod" required>
+              <option value="Cash">Cash</option>
+              <option value="UPI">UPI</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label>Expense Date</label>
+
+            <input
+              type="date"
+              id="expenseDate"
+              required
+            >
+          </div>
+
+
+          <div class="form-group">
+            <label>Description</label>
+
+            <input
+              type="text"
+              id="description"
+              placeholder="e.g. Iron delivery transport"
+            >
+          </div>
+
+        </div>
+
+
+        <button class="save-btn" type="submit">
+          💾 Save Expense
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- EXPENSE HISTORY -->
+
+    <section class="panel history">
+
+      <div class="panel-header">
+
+        <h2>📋 Expense History</h2>
+
+        <button id="clearExpenses">
+          Clear Expenses
+        </button>
+
+      </div>
+
+
+      <div class="table-container">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Date</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Paid To</th>
+              <th>Method</th>
+              <th>Amount</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="expenseTableBody"></tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="expenses.js"></script>
+
+</body>
+</html>
