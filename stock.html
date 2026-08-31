@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stock Management - ScrapPro</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stock.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <h2>♻️ ScrapPro</h2>
+
+    <nav>
+      <a href="index.html">📊 Dashboard</a>
+      <a href="purchase.html">📦 Purchases</a>
+      <a href="sales.html">🚚 Sales</a>
+      <a class="active" href="stock.html">🏭 Stock</a>
+      <a href="#">👥 Suppliers</a>
+      <a href="#">🧑‍💼 Customers</a>
+      <a href="#">💰 Payments</a>
+      <a href="#">💸 Expenses</a>
+      <a href="#">📈 Profit & Loss</a>
+      <a href="#">📄 Invoices</a>
+      <a href="#">📊 Reports</a>
+    </nav>
+  </aside>
+
+
+  <main class="main">
+
+    <header>
+      <div>
+        <h1>Stock Management</h1>
+        <p>Track your current scrap inventory</p>
+      </div>
+    </header>
+
+
+    <!-- STOCK SUMMARY -->
+
+    <section class="stock-cards">
+
+      <div class="stock-card">
+        <span>📦</span>
+        <div>
+          <p>Total Stock</p>
+          <h2 id="totalStock">0 KG</h2>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <span>💰</span>
+        <div>
+          <p>Stock Value</p>
+          <h2 id="stockValue">₹0</h2>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <span>📥</span>
+        <div>
+          <p>Total Purchased</p>
+          <h2 id="totalPurchased">0 KG</h2>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <span>📤</span>
+        <div>
+          <p>Total Sold</p>
+          <h2 id="totalSold">0 KG</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- STOCK TABLE -->
+
+    <section class="panel">
+
+      <div class="panel-header">
+        <h2>🏭 Current Stock</h2>
+
+        <button id="refreshStock">
+          🔄 Refresh
+        </button>
+      </div>
+
+
+      <div class="table-container">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Scrap Type</th>
+              <th>Purchased</th>
+              <th>Sold</th>
+              <th>Current Stock</th>
+              <th>Average Purchase Rate</th>
+              <th>Stock Value</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="stockTableBody"></tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <!-- STOCK MOVEMENT -->
+
+    <section class="panel movement">
+
+      <div class="panel-header">
+        <h2>📊 Stock Movement</h2>
+      </div>
+
+      <div id="movementContainer"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="stock.js"></script>
+
+</body>
+</html>
