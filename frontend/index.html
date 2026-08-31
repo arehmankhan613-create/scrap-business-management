@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrap Business Management</title>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <h2>♻️ ScrapPro</h2>
+
+    <nav>
+      <a class="active" href="#">📊 Dashboard</a>
+      <a href="#">📦 Purchases</a>
+      <a href="#">🚚 Sales</a>
+      <a href="#">🏭 Stock</a>
+      <a href="#">👥 Suppliers</a>
+      <a href="#">🧑‍💼 Customers</a>
+      <a href="#">💰 Payments</a>
+      <a href="#">💸 Expenses</a>
+      <a href="#">📈 Profit & Loss</a>
+      <a href="#">📄 Invoices</a>
+      <a href="#">📊 Reports</a>
+    </nav>
+  </aside>
+
+
+  <main class="main">
+
+    <header>
+      <div>
+        <h1>Dashboard</h1>
+        <p>Welcome to your Scrap Business Management System</p>
+      </div>
+
+      <button id="addSaleBtn">+ Add Sale</button>
+    </header>
+
+
+    <!-- SUMMARY CARDS -->
+
+    <section class="cards">
+
+      <div class="card">
+        <span>💰</span>
+        <div>
+          <p>Total Purchase</p>
+          <h2 id="purchase">₹2,40,000</h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <span>🚚</span>
+        <div>
+          <p>Total Sales</p>
+          <h2 id="sales">₹3,10,000</h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <span>💸</span>
+        <div>
+          <p>Total Expenses</p>
+          <h2 id="expenses">₹27,500</h2>
+        </div>
+      </div>
+
+      <div class="card profit">
+        <span>📈</span>
+        <div>
+          <p>Net Profit</p>
+          <h2 id="profit">₹42,500</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- STOCK + PAYMENTS -->
+
+    <section class="grid">
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📦 Current Stock</h2>
+          <button>View All</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Scrap Type</th>
+              <th>Quantity</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Iron</td>
+              <td>2,450 KG</td>
+              <td>₹73,500</td>
+            </tr>
+
+            <tr>
+              <td>Copper</td>
+              <td>380 KG</td>
+              <td>₹30,400</td>
+            </tr>
+
+            <tr>
+              <td>Aluminium</td>
+              <td>720 KG</td>
+              <td>₹12,960</td>
+            </tr>
+
+            <tr>
+              <td>Plastic</td>
+              <td>1,200 KG</td>
+              <td>₹18,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="panel payments">
+
+        <div class="panel-header">
+          <h2>💳 Payments</h2>
+        </div>
+
+        <div class="payment-box receive">
+          <p>To Receive</p>
+          <h2>₹35,000</h2>
+          <small>From customers</small>
+        </div>
+
+        <div class="payment-box pay">
+          <p>To Pay</p>
+          <h2>₹18,500</h2>
+          <small>To suppliers</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RECENT TRANSACTIONS -->
+
+    <section class="panel transactions">
+
+      <div class="panel-header">
+        <h2>🕒 Recent Transactions</h2>
+        <button>View All</button>
+      </div>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Party</th>
+            <th>Scrap</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>31 Aug 2026</td>
+            <td>Purchase</td>
+            <td>Rahman Scrap</td>
+            <td>Iron</td>
+            <td>₹25,000</td>
+            <td><span class="badge pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>31 Aug 2026</td>
+            <td>Sale</td>
+            <td>ABC Metals</td>
+            <td>Copper</td>
+            <td>₹42,000</td>
+            <td><span class="badge paid">Paid</span></td>
+          </tr>
+
+          <tr>
+            <td>30 Aug 2026</td>
+            <td>Expense</td>
+            <td>Transport</td>
+            <td>-</td>
+            <td>₹3,500</td>
+            <td><span class="badge paid">Paid</span></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
